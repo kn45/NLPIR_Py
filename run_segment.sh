@@ -1,7 +1,7 @@
 #!/bin/bash
 
-term_cntnt_tb=ct_chi2_cntnt
-term_seg_tb=ct_chi2_segs_uni
+term_cntnt_tb=kn45_chi2_cntnt
+term_seg_tb=kn45_chi2_segs_uni
 
 seg_dir=/data0/result/chenting5/segmentation/NLPIR
 
