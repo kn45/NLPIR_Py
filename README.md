@@ -9,7 +9,7 @@ Refer to example.py
 `echo -e "杂谈\t今天tm真是走了狗屎运了\!" | ./example.py s`  
 ## Cluster mode
 #### Hive Transform Solution
-Refer to segment.sh
+Refer to run_segment.sh
 #### Hadoop Streaming Solution
 TO BE CONTINUED ...
 
