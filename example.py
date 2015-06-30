@@ -33,7 +33,7 @@ seg_dir = '/data0/result/chenting5/segmentation/NLPIR/'
 
 if __name__ == "__main__":
 	if len(sys.argv) < 2 or sys.argv[1] not in ['s', 'c']:
-		print "arg should be s(tandalone), or c(cluster)"
+		print "arg should be s(tandalone), or c(luster)"
 		sys.exit()
 	seg_mod = sys.argv[1]
 	if seg_mod == 's':
