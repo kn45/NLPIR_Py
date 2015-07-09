@@ -3,6 +3,7 @@
 term_cntnt_tb=kn45_chi2_cntnt
 term_seg_tb=kn45_chi2_segs_uni
 
+# seg_dir is the dir that contains the module folder nlpir_py 
 seg_dir=/data0/result/chenting5/segmentation/NLPIR
 
 function term_segment()
