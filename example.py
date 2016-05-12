@@ -29,7 +29,7 @@ def load_usr_dic(dic_dir):
     for line in open(dic_dir, 'r'):
         nlpir.AddUserWord(line.strip())
 
-seg_dir = '/data0/result/chenting5/segmentation/NLPIR/'
+seg_dir = './'
 
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in ['s', 'c']:

@@ -4,6 +4,7 @@ Only include the library for x64-Linux, not supporting x64-OSX or other OS.
 Examples for Stand-alone mode and a possible solution for Map-Reduce.  
   
 _Any copy right, permmision or other license infomation of NLPIR please refer to <http://ictclas.nlpir.org>_  
+If user license file(NLPIR.user) is expired, new one could be found in official website
 ## Stand-alone mode
 Refer to example.py  
 `echo -e "杂谈\t今天tm真是走了狗屎运了\!" | ./example.py s`  
