@@ -2,11 +2,15 @@
 # -*- coding=utf-8 -*-
 
 import sys
-# for cluster job
-sys.path.append('./')
-# for stand-alone job
-sys.path.append('/data0/result/chenting5/segmentation/NLPIR/')
+try:
+    # for cluster job
+    sys.path.append('./')
+    # for stand-alone job
+    sys.path.append('/data0/result/chenting5/segmentation/NLPIR/')
+except:
+    pass
 import nlpirpy as nlpir
+
 
 def valid_word(atom):
     pos = atom[1]
@@ -25,12 +29,13 @@ def valid_word(atom):
             return False
     return True
 
+
 def load_usr_dic(dic_dir):
     for line in open(dic_dir, 'r'):
         nlpir.AddUserWord(line.strip())
 
-seg_dir = './'
 
+seg_dir = './'
 if __name__ == "__main__":
     if len(sys.argv) < 2 or sys.argv[1] not in ['s', 'c']:
         print "arg should be s(tandalone), or c(luster)"
@@ -43,12 +48,13 @@ if __name__ == "__main__":
 
     if sys.stdin.isatty():
         content = '大哥请你从stdin输入一句话啊!'
-        uni = ' '.join([t[0] for t in nlpir.Seg(content) if valid_word(t) == True])
+        uni = ' '.join([t[0] for t in nlpir.Seg(content)
+                        if valid_word(t)])
         print uni
     else:
         for line in sys.stdin:
             content = line.strip('\n')
             if content == '':
                 content = '大哥请你从stdin输入一句话啊!'
-            uni = ' '.join([t[0] for t in nlpir.Seg(content) if valid_word(t) == True])
+            uni = ' '.join([t[0] for t in nlpir.Seg(content) if valid_word(t)])
             print uni
